@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Cabin", sans-serif;
+  font-family: "Cookie", cursive;
+  font-family: "Handlee", cursive;
+  font-family: "Hubballi", cursive;
+}
+
+@media screen and (max-width: 767px) {
+  /* barra de navegacion */
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+  .container-fluid {
+    background-color: white;
+  }
+  /* letras del menu */
+  .nav-item {
+    color: black;
+    font-size: 15px;
+    margin-left: 30px;
+  }
+  .nav-item a {
+    color: black;
+  }
+  .nav-item a:hover {
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+  }
+  .dropdown-item {
+    color: black;
+    font-size: 15px;
+    margin-left: 30px;
+    background-color: white;
+    color: black;
+  }
+  .dropdown-item:hover {
+    background-color: black;
+    color: white;
+  }
+  /* titulo principal */
+  .animate__lightSpeedInLeft {
+    font-size: 30px;
+    text-align: center;
+    color: black;
+    margin-top: 10px;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+  }
+  /* presentacion del espacio */
+  .presentacion {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 15px;
+    margin: 10px;
+  }
+  .presentacion p {
+    font-size: 15px;
+    color: black;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+  .presentacion img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-left: 10px;
+  }
+  /* galeria */
+  .galeria {
+    background-color: black;
+    padding: 10px;
+    margin: 10px;
+    /* futura galeria de imagenes */
+  }
+  .galeria h3 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+  }
+  .galeria .galeria-img {
+    display: grid;
+  }
+  /* servicios */
+  .servicios {
+    font-size: 30px;
+    color: white;
+    background-color: black;
+    padding: 15px;
+    text-align: center;
+  }
+  .expl-servicios {
+    background-color: navajowhite;
+  }
+  .expl-servicios .box-servicios {
+    display: flex;
+    padding: 10px;
+    margin: 20px;
+  }
+  .expl-servicios .box-servicios img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    margin-top: 40px;
+  }
+  .expl-servicios .box-servicios .texto p {
+    font-size: 15px;
+    color: black;
+    margin-left: 20px;
+    margin-top: 40px;
+  }
+  .expl-servicios .box-servicios .texto h3 {
+    font-size: 20px;
+    text-align: center;
+    color: brown;
+    font-weight: 700;
+    margin-top: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* barra de navegacion */
+  .logo {
+    width: 100px;
+    height: auto;
+  }
+  .container-fluid {
+    background-color: white;
+  }
+  /* letras del menu */
+  .nav-item {
+    color: black;
+    font-size: 20px;
+    margin-left: 30px;
+  }
+  .nav-item a {
+    color: black;
+  }
+  .nav-item a:hover {
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+  }
+  .dropdown-item {
+    color: black;
+    font-size: 20px;
+    margin-left: 30px;
+    background-color: white;
+    color: black;
+  }
+  .dropdown-item:hover {
+    background-color: black;
+    color: white;
+  }
+  /* titulo principal */
+  .animate__lightSpeedInLeft {
+    font-size: 50px;
+    text-align: center;
+    color: black;
+    margin-top: 20px;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+  }
+  /* presentacion del espacio */
+  .presentacion {
+    display: flex;
+    padding: 15px;
+    margin: 10px;
+  }
+  .presentacion p {
+    font-size: 22px;
+    color: black;
+    font-weight: 700;
+    margin-top: 20px;
+  }
+  .presentacion img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-left: 10px;
+  }
+  /* galeria */
+  .galeria {
+    background-color: black;
+    padding: 10px;
+    margin: 10px;
+  }
+  .galeria h3 {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+  }
+  .galeria .galeria-img {
+    display: grid;
+  }
+  /* servicios */
+  .servicios {
+    font-size: 40px;
+    color: white;
+    background-color: black;
+    padding: 15px;
+    text-align: center;
+  }
+  .expl-servicios {
+    background-color: navajowhite;
+  }
+  .expl-servicios .box-servicios {
+    display: flex;
+    padding: 10px;
+    margin: 20px;
+  }
+  .expl-servicios .box-servicios img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin-top: 40px;
+  }
+  .expl-servicios .box-servicios .texto p {
+    font-size: 20px;
+    color: black;
+    margin-left: 20px;
+    margin-top: 40px;
+  }
+  .expl-servicios .box-servicios .texto h3 {
+    font-size: 30px;
+    text-align: center;
+    color: brown;
+    font-weight: 700;
+    margin-top: 40px;
+  }
+}/*# sourceMappingURL=style.css.map */
