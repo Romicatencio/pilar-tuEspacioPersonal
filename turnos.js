@@ -3,7 +3,7 @@
  alert ("Bienvenido a tu espacio personal")
 alert ("Por favor sigue las instrucciones para que podamos ayudarte")
 
-// se pidenombre completo, contraseña y usuario para ingresar
+// se pide nombre completo, contraseña y usuario para ingresar
 
 let nombreCompleto= prompt ("Ingresa tu nombre completo")
 
@@ -194,9 +194,16 @@ else {
 
     for ( let i =1; i<=2; i ++){
         let encuesta = prompt ("Ingresa" + " "+ i  +" "+  "servicio que hayas disfrutado" )
-        alert ("El servicio "+  " " +i+ " "+ "que más disfrutaste fue:" +" "+ encuesta )
+        alert ("El servicio "+  " " +i+ " "+ "que más disfrutaste fue:" +" "+ encuesta )}
+        
+    
+
+    for ( let i =1; i<=1; i ++){
+        let encuesta = prompt ("Por favor escribenos alguna sugerencia para mejorar"  )
+        alert ("Tu sugerencia fue: " +" " + encuesta )
         alert ("Gracias por responder")
     }
+
     //saludo de agradecimiento
 
 alert ("Gracias por confiar en Pilar-Tu Espacio Personal")
