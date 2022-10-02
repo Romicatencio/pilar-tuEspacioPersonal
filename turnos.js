@@ -192,9 +192,9 @@ else {
 
     alert ("Porque tu opinión nos importa. Por favor responde la siguiente encuesta")
 
-    for ( let i =1; i<=1; i ++){
-        let encuesta = prompt ("Ingresa que servicio disfrutaste mas")
-        alert ("El servicio que más disfrutaste fue" +" "+ encuesta)
+    for ( let i =1; i<=2; i ++){
+        let encuesta = prompt ("Ingresa" + " "+ i  +" "+  "servicio que hayas disfrutado" )
+        alert ("El servicio "+  " " +i+ " "+ "que más disfrutaste fue:" +" "+ encuesta )
         alert ("Gracias por responder")
     }
     //saludo de agradecimiento
