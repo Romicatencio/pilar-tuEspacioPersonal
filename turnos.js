@@ -201,7 +201,7 @@ else {
     for ( let i =1; i<=1; i ++){
         let encuesta = prompt ("Por favor escribenos alguna sugerencia para mejorar"  )
         alert ("Tu sugerencia fue: " +" " + encuesta )
-        alert ("Gracias por responder")
+        alert ("Gracias por responder y ayudarnos a mejorar")
     }
 
     //saludo de agradecimiento
