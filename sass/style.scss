@@ -106,7 +106,7 @@ font-family: 'Hubballi', cursive
 .galeria-img{
     display: grid;
 }
-    
+    /* futura galeria de imagenes */
 }
 
 
@@ -152,6 +152,451 @@ font-family: 'Hubballi', cursive
             margin-top: 40px;
          }
     } }}
+
+
+/* natura */
+
+/* logo de natura y texto */
+
+.logo-natura {
+    padding: 10px;
+    display: flex;
+
+img{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: 10px;
+    margin-left: 150px;
+}
+
+h1{
+    font-size: 50x;
+    color: brown;
+    font-weight: 700;
+    margin-top: 50px;
+
+}
+}
+
+/* img de jabones y cremas */
+
+.cremas-jabones{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 20px;
+    
+    gap: 3px;
+
+    .jabones{
+        background-color: rgb(196, 248, 196);
+        padding: 10px;
+        margin-left: 30px;
+
+        img{
+            width: 250px;
+            height: 250px;
+            margin-left: 40px;
+            padding: 5px;
+        }
+    }
+
+    .cremas{
+        padding: 10px;
+        background-color: rgb(248, 222, 195);
+
+        img{
+            width: 400px;
+            height: 400px;
+            padding: 8px;
+            margin-left: 30px;
+        }
+    }
+}
+/* texto de cosmeticos */
+.belleza{
+    font-size: 70px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    padding: 15px;
+    background-color: burlywood;
+    margin-top: 20px;
+    
+}  
+
+/* org de maquillaje */
+.maquillaje{
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    margin: 10px;
+
+   
+
+    img{
+        width: 250px;
+        height: 300px;
+
+    }
+
+}
+
+.fragancias{
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    margin: 10px;
+
+   
+
+    img{
+        width: 200px;
+        height: 250px;
+
+    }
+
+}
+
+
+/* link de natura */
+
+.link-natura{ 
+    display: flex;
+    margin: auto;
+    margin-left: 350px;
+    margin-top: 30px;
+    
+
+    h2{
+        background-color: rgb(196, 248, 196);
+        width: 300px;
+        height: 213px;
+        padding: 20px;
+        
+        margin-bottom: 30px;
+        font-size: 25px;
+        color:black;
+        padding: 20px;
+        text-align: center;
+       
+        
+    }
+
+      a img{
+        width: 300px;
+        height: auto;
+    }
+}
+
+ /* bagues */
+
+ /* img-bagues */
+ .presentacion-bagues {
+    background-color: black;
+    padding: 10px;
+    width: 600px;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+
+    img{
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        margin: auto;
+    }
+ }
+/* que es bagues */
+ .expl-bagues{
+    width: 800px;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+
+    h1{
+        font-size: 40px;
+        color:rgb(5, 201, 135);
+        text-align: center;
+        font-weight: 700;
+
+    }
+
+    p{
+        font-size: 25px;
+        text-align: center;
+        color:black;
+    }
+ }
+
+ .link-bagues{
+    background-color: rgb(5, 201, 135) ;
+    width: 800px;
+    height: auto;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 30px;
+
+    h3{
+        font-size: 20px;
+        color:white;
+        text-align: center;
+    }
+
+    a{
+        color:black;
+        text-decoration: none;
+        font-size: 25px;
+        margin-left: 90px;
+
+        &:hover{
+            color:crimson;
+            font-weight: 600;
+        }
+    }
+ }
+
+
+ /* ingreso al sistema*/
+/* h1-pedir el turno */
+
+ .ingreso{
+    font-size: 45px;
+    color:rgb(248, 133, 150);
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+    padding: 10px;
+ }
+
+
+
+/* ingrese usuario o contraseña */
+
+
+ #form-1{
+    background-color: black;
+    padding: 20px;
+    width: 800px;
+    height: auto;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;}
+
+    .container-ingreso{
+        display: flex;
+    
+
+ h3{
+    color:white;
+    font-size: 20px;
+    margin-top: 60px;
+    text-align: center;
+ }
+
+
+ .usuario{
+    font-size: 20px;
+    color: white;
+    padding: 15px;
+    margin-left: 21px;
+    margin-top: 15px;
+
+
+ }
+
+ .contraseña{
+    font-size: 20px;
+    color: white;
+    margin-left: 5px;
+   
+ }
+
+ .submit{
+    font-size: 20px;
+    color: white;
+    input{
+    background-color:hotpink;
+    border-radius: 30px;
+    padding: 7px;
+    margin-top: 30px;
+    margin-left: 45px;}
+ }
+
+img{
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-top: 100px;
+    
+
+ }
+    }
+
+
+
+/* formulario de turno */
+#form-2{
+    background-color: white;
+    padding: 15px;
+    
+    .servicio{
+        font-size: 25px;
+        color: black;
+     
+        
+        p{
+            font-weight: 700;
+            font-size: 25px;
+            color:black;
+            background-color:rgb(146, 224, 250);
+            border-radius: 20px;
+            text-align: center;
+            padding: 10px;
+    }
+
+   
+      select{
+        margin-left: 250px;
+        padding: 10px;
+        margin-bottom: 10px;
+
+        
+ 
+       option{ background-color: black;
+               color:white;
+               padding: 20px;
+               text-align: center;
+               
+           &:hover {
+                background-color:white;
+                color: black;
+               }
+    }
+    
+    }}
+
+    .dias{
+        font-size: 25px;
+        color: black;
+
+        select{
+            margin-left: 320px;
+            padding: 10px;
+            margin-bottom: 10px;
+          }
+
+          option{ background-color: black;
+            color:white;
+            padding: 20px;
+            text-align: center;
+            
+          &:hover {
+             background-color:white;
+             color: black;
+            }  }
+
+        p{
+            font-weight: 700;
+            font-size: 25px;
+            color:black;
+            background-color:rgb(146, 224, 250);
+            border-radius: 20px;
+            text-align: center;
+            padding: 10px;
+    }
+
+    }
+    .hora{
+        font-size: 25px;
+        color: black;
+
+        select{
+            margin-left: 350px;
+            padding: 10px;
+            margin-bottom: 10px;
+          }
+
+        p{
+            font-weight: 700;
+            font-size: 25px;
+            color:black;
+            background-color:rgb(146, 224, 250);
+            border-radius: 20px;
+            text-align: center;
+            padding: 10px;
+    }
+
+    option{ background-color: black;
+        color:white;
+        padding: 20px;
+        text-align: center;
+        
+      &:hover {
+         background-color:white;
+         color: black;
+        }
+
+    }
+    }
+    .pago{
+        font-size: 25px;
+        color: black;
+
+       
+
+        label{
+            font-weight: 700;
+            font-size: 25px;
+            color:black;
+            background-color:rgb(146, 224, 250);
+            border-radius: 20px;
+            text-align: center;
+            padding: 10px;
+            display: block;
+    }
+
+    input{
+        margin-left: 130px;
+        padding: 10px;
+    }
+
+    }
+
+    .opinion{
+        font-size: 25px;
+        color: black;
+
+        p{
+            font-weight: 700;
+            font-size: 25px;
+            color:black;
+            background-color:rgb(146, 224, 250);
+            border-radius: 20px;
+            text-align: center;
+            padding: 10px;
+    }
+
+
+    textarea{
+        
+            margin-left: 150px;
+            padding: 10px;
+            margin-bottom: 10px;
+        
+    }
+    }
+
+}
+
+/* h3{
+    font-size: 45px;
+    color: darkblue;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 600;
+} */
+
 
 
 
