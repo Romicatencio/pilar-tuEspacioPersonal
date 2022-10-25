@@ -44,7 +44,7 @@ else{
     
 
 }
-
+ // los servicios que ofrecen con sus precios
   function Servicios( id,nombre,precio)
 {
     this.id = id;
@@ -68,6 +68,8 @@ servicioOfrecidos.forEach ( servicio => {
     mensajeServicios += ` ${servicio.id} - ${servicio.nombre} con un valor de ${servicio.precio} \n `
 
 })
+
+//eleccion del usuario 
 
 let opcionServicio=  parseInt (prompt (mensajeServicios))
 

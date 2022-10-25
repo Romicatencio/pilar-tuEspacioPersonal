@@ -371,68 +371,73 @@ h1{
 
 
 
-/* ingrese usuario o contraseña */
+/* ingrese usuario o registro */
 
 
- #form-1{
-    background-color: black;
-    padding: 20px;
-    width: 800px;
-    height: auto;
-    margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;}
-
-    .container-ingreso{
-        display: flex;
-    
-
- h3{
-    color:white;
-    font-size: 20px;
-    margin-top: 60px;
-    text-align: center;
- }
+.container-ingreso{
+    display: flex;
 
 
- .usuario{
-    font-size: 20px;
-    color: white;
-    padding: 15px;
-    margin-left: 21px;
-    margin-top: 15px;
+    #form-ingreso{
+        background-color: black;
+        padding: 10px;
+        width: 500px;
+        height: 300px;
+        margin-left: 20px;
 
+        h3{
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .usuario{
+            color: white;
+            font-size: 20px;
+        }
 
- }
+        .contraseña{
+            color: white;
+            font-size: 20px;
+        }
 
- .contraseña{
-    font-size: 20px;
-    color: white;
-    margin-left: 5px;
-   
- }
+        .submit input{
+            border-radius: 20px;
+            padding: 5px;
+            background-color:deeppink;
+            color: white;
 
- .submit{
-    font-size: 20px;
-    color: white;
-    input{
-    background-color:hotpink;
-    border-radius: 30px;
-    padding: 7px;
-    margin-top: 30px;
-    margin-left: 45px;}
- }
+            &:hover{
+                background-color: white;
+                color: deeppink;
+            }
 
-img{
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    margin-top: 100px;
-    
+        }
 
- }
     }
 
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 /* formulario de turno */
