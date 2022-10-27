@@ -17,7 +17,7 @@
 
 
 
-<form id="form-2" action="" method="get">
+<form id="formSacarTurnos" action="" method="get">
 
 <div class="servicio">
     <p>Escoge el servicio que deseas contratar:</p>
@@ -63,7 +63,7 @@
 </div>
 
 <div class="pago">
-    <label for="medios de pago"> Escoge el medio de pago para abonar:</label>
+    <label id="pagos" for="medios de pago"> Escoge el medio de pago para abonar:</label>
     
     <input type="radio" name="pago" value="Efectivo">Efectivo
     <input type="radio" name="pago" value="Credito">Credito
@@ -82,6 +82,12 @@
 
     <h3>Muchas gracias por responder</h3>
 </div>
+
+<div>
+    <button type="submit" id="buttonEnviar"> Enviar</button>
+</div>
+
+<h3 id="respuesta-turnos"> </h3>
 </form>
 
 

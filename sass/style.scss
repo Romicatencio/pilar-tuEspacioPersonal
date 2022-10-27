@@ -376,48 +376,148 @@ h1{
 
 .container-ingreso{
     display: flex;
+    justify-content:center;
+    gap:10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: solid 2px black;
+    padding: 10px;
+    margin:auto;
+    width: 1000px;
+    height: auto;
+    border-radius: 20px;
 
 
     #form-ingreso{
         background-color: black;
         padding: 10px;
-        width: 500px;
-        height: 300px;
+        width: 400px;
+        height: 450px;
         margin-left: 20px;
+        border-radius: 30px;
+        margin-top: 30px;
+        
+        
 
         h3{
             color: white;
             font-size: 20px;
             text-align: center;
-            margin-top: 10px;
+            margin-top: 20px;
         }
         .usuario{
             color: white;
             font-size: 20px;
+            margin-top: 20px;
+            
+            label{
+                margin-left: 30px;
+            }
         }
 
         .contraseña{
             color: white;
             font-size: 20px;
+            margin-top: 20px;
         }
 
         .submit input{
-            border-radius: 20px;
+            border-radius: 25px;
             padding: 5px;
             background-color:deeppink;
             color: white;
+            margin-left: 120px;
+            margin-top: 30px;
+            font-size: 25px;
 
             &:hover{
                 background-color: white;
                 color: deeppink;
+                border: solid 5px deeppink;
             }
 
         }
 
     }
 
+         #form-registro{
+            
+            background-color: white;
+            /* border: solid 3px black; */
+            padding: 10px;
+            width: 600px;
+            height: auto;
 
 
+
+            h3{
+                font-size: 25px;
+                text-align: center;
+                color:deeppink;
+                margin-top: 20px;
+                font-weight: 600;
+            }
+
+            .nombreA{
+                font-size: 20px;
+                color: black;
+                margin-top: 20px;
+                margin-left: 20px;
+            }
+
+            .emailR{
+                font-size: 20px;
+                color: black;
+                margin-top: 20px;
+                margin-left: 115px;
+            }
+
+            .cel{
+                font-size: 20px;
+                color: black;
+                margin-top: 20px;
+                margin-left: 110px;
+            }
+
+            .nac{
+                font-size: 20px;
+                color: black;
+                margin-top: 20px;
+            }
+
+            .usuarioR{
+                font-size: 20px;
+                color: black;
+                margin-top: 20px;
+                margin-left: 100px;
+            }
+
+            .contraseñaR{
+                font-size: 20px;
+                color: black;
+                margin-top: 20px;
+                margin-left: 70px;
+            }
+
+            .buttonRegistro{
+                font-size: 20px;
+                margin-top: 20px;
+
+                input{
+                    background-color: deeppink;
+                    border-radius: 30px;
+                    padding: 10px;
+                    margin-left: 100px;
+                    color: white;
+                    border: solid white 3px;
+                }
+                
+            }
+
+           
+
+         }
+     
 
 
 }
