@@ -126,10 +126,12 @@ function sacarTurno (ev){
             this.dia=dia;
             this.hora=hora;
             this.pago=pago
+            this.opinion=opinion;
+            this.sugerencia=sugerencia
         }
     }
      
-    const turno= new Turno (servicio, dia ,hora, pago)
+    const turno= new Turno (servicio, dia ,hora, pago,opinion,sugerencia)
 
    turnos.push (Turno)
     
@@ -144,7 +146,12 @@ function sacarTurno (ev){
 //guardo en el storage
 
 localStorage.setItem ("TurnoPedido", JSON.stringify (turnos))
-
+localStorage.getItem ("servicio");
+localStorage.getItem ("dias")
+localStorage.getItem ("hora")
+localStorage.getItem ("pago")
+localStorage.getItem ("opinion")
+localStorage.getItem ("sugerencia")
 
 mostrarInfo (turnos)
 
