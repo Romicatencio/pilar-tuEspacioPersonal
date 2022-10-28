@@ -103,12 +103,12 @@ function ingreso(){
 
 //sacar turnos.
 
-let servicio= document.getElementById ("servicio").value;
-let dias= document.getElementById ("dias").value;
-let hora= document.getElementById ("hora").value;
-let pago= document.getElementById ("pagos").value;
-let opinion = document. getElementById ("opinion").value;
-let sugerencia= document.getElementById ("sugerencia").value;
+let servicio= document.getElementById ("servicio");
+let dias= document.getElementById ("dias");
+let hora= document.getElementById ("hora");
+let pago= document.getElementById ("pagos");
+let opinion = document. getElementById ("opinion");
+let sugerencia= document.getElementById ("sugerencia");
 let buttonEnviar= document.getElementById ("buttonEnviar");
 let respTurnos= document.getElementById ("respuesta-turnos");
 let formTurnos= document.getElementById ("formSacarTurnos");
@@ -142,7 +142,7 @@ function sacarTurno (ev){
     formTurnos.addEventListener ("click", mostrarInfo)
 
     function mostrarInfo (ev){
-        if ( (servicio =="") || (dias =="")||(hora=="")||(pago=="")||(opinion =="")|| (sugerencia=="") )
+        if ( (servicio.value =="") || (dias.value =="")||(hora.value=="")||(pago.value=="")||(opinion.value =="")|| (sugerencia.value=="") )
     
        {ev.preventDefault ()
     
