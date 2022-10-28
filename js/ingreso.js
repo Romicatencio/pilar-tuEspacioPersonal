@@ -2,7 +2,7 @@
 //validar ingreso de usuario
 
 
-let formularioIngreso = document.getElementById("form-ingreso");
+let formularioIngreso = document.getElementById("formIngreso");
 let usuario = document.getElementById ("usuario");
 let contraseña = document.getElementById ("contraseña");
 let button= document.getElementById ("button");
@@ -17,7 +17,8 @@ let contraseñaRegistro= document.getElementById ("contraseñaR");
 let respuesta = document.getElementById ("respuesta");
 let respuestaR= document.getElementById("respuestaR");
 
-formularioIngreso.addEventListener ("submit", validar);
+
+formularioIngreso.addEventListener("submit",validar);
 
 function validar (e){
 
@@ -69,7 +70,7 @@ function pedirTurnos(){
 crearUsuario.addEventListener ("submit", validarRegistro)
 
 function validarRegistro (e){
-      if ((nombreApellido.value =="") || (email.value=="")||(cel.value=="")||(nacimiento.value=="")||(usuarioRegistro.value=="") || (contraseñaRegistro.value==""))
+      if ((nombreApellido.value =="") || (email.value=="")||(parseInt(cel.value==""))||( parseInt(nacimiento.value==""))||(usuarioRegistro.value=="") || (contraseñaRegistro.value==""))
 
       {
         e.preventDefault();
@@ -106,13 +107,14 @@ let servicio= document.getElementById ("servicio").value;
 let dias= document.getElementById ("dias").value;
 let hora= document.getElementById ("hora").value;
 let pago= document.getElementById ("pagos").value;
-let opinion = document. getElementById ("opinion");
-let sugerencia= document.getElementById ("sugerencia");
+let opinion = document. getElementById ("opinion").value;
+let sugerencia= document.getElementById ("sugerencia").value;
 let buttonEnviar= document.getElementById ("buttonEnviar");
 let respTurnos= document.getElementById ("respuesta-turnos");
-let sacarTurnos= document.getElementById ("formSacarTurnos");
+let formTurnos= document.getElementById ("formSacarTurnos");
 
 //validar este formulario
+
 
 
 let turnos = []
@@ -120,7 +122,7 @@ let turnos = []
 
 
 function sacarTurno (ev){
-    class Turno {
+    class turno {
         constructor(servicio,dia,hora,pago){
             this.servicio=servicio;
             this.dia=dia;
@@ -130,16 +132,40 @@ function sacarTurno (ev){
             this.sugerencia=sugerencia
         }
     }
-     
-    const turno= new Turno (servicio, dia ,hora, pago,opinion,sugerencia)
-
-   turnos.push (Turno)
+}
     
-
-   {ev.preventDefault ()
-
     
-}}
+    const turno= new turno (servicio, dia ,hora, pago,opinion,sugerencia)
+
+   
+
+    formTurnos.addEventListener ("click", mostrarInfo)
+
+    function mostrarInfo (ev){
+        if ( (servicio =="") || (dias =="")||(hora=="")||(pago=="")||(opinion =="")|| (sugerencia=="") )
+    
+       {ev.preventDefault ()
+    
+        respTurnos.innerHTML= "Por favor, completa todos los campos"
+    }
+    
+    else{
+        ev.addEventListener();
+    
+        respTurnos.innerHTML= ` Has elegido el servicio ${servicio}, el día ${dias} \n. Tu horario es: ${hora} y tu forma de pago será: ${pago} \n. Muchas gracias por elegirnos `
+    }
+    }    
+
+   
+
+buttonEnviar.addEventListener ("test",agendarTurno)
+
+function agendarTurno(){
+    turnos.push (turno)
+    respTurnos.innerHTML= ` Has elegido el servicio ${servicio}, el día ${dias} \n. Tu horario es: ${hora} y tu forma de pago será: ${pago} \n. Muchas gracias por elegirnos `
+
+}
+
 
 
 
@@ -155,28 +181,9 @@ localStorage.getItem ("sugerencia")
 
 mostrarInfo (turnos)
 
-const mostrarInfo= (turnos) =>{
-    if ( (servicio =="") || (dias =="")||(hora=="")||(pago=="")||(opinion =="")|| (sugerencia=="") )
-
-   {ev.preventDefault ()
-
-    respTurnos.innerHTML= "Por favor, completa todos los campos"
-}
-
-else{
-    ev.addEventListener();
-
-    respTurnos.innerHTML= ` Has elegido el servicio ${servicio.value}, el día ${dias.value} \n. Tu horario es: ${hora.value} y tu forma de pago será: ${pago.value} \n. Muchas gracias por elegirnos `
-}
-}
 
 
-buttonEnviar.addEventListener ("test",sacarTurno)
 
-function sacarTurno(){
-    respTurnos.innerHTML= ` Has elegido el servicio ${servicio.value}, el día ${dias.value} \n. Tu horario es: ${hora.value} y tu forma de pago será: ${pago.value} \n. Muchas gracias por elegirnos `
-
-}
 
 /* function sacarTurno (){
     ev.addEventListener();
