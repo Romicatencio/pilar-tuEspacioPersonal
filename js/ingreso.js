@@ -1,12 +1,12 @@
 
-//validar ingreso de usuario
+
 
 
 let formularioIngreso = document.getElementById("formIngreso");
 let usuario = document.getElementById ("usuario");
 let contraseña = document.getElementById ("contraseña");
-let button= document.getElementById ("button");
-let buttonR= document.getElementById("buttonRegistro");
+let buttonIngreso= document.getElementById ("button");
+let buttonRegistro= document.getElementById("buttonRegistro");
 let crearUsuario= document.getElementById ("form-registro");
 let nombreApellido= document.getElementById ("nombre");
 let email= document.getElementById ("email");
@@ -18,12 +18,39 @@ let respuesta = document.getElementById ("respuesta");
 let respuestaR= document.getElementById("respuestaR");
 
 
-formularioIngreso.addEventListener("submit",validar);
+class persona {
+    constructor(nombre,nacimiento, email, cel, usuario,contraseña){
+        this.nombre=nombre;
+        this.nacimiento=nacimiento;
+        this.email=email;
+        this.cel=cel;
+        this.usuario=usuario;
+        this.contraseña=contraseña;
+    }
+}
+
+
+
+
+//validar ingreso de usuario
+buttonIngreso.addEventListener ("click", validar);
 
 function validar (e){
 
+    //traigo el JSON del localstorage
+    //const objJSON = JSON.parse(localStorage.getItem(document.getElementById ("usuario").value));
+      
     
-    if ((usuario.value == "") || (contraseña.value == ""))
+    
+    if (//( objJSON != null && 
+        //objJSON.usuario == document.getElementById (usuario).value &&
+        //objJSON.contraseña == document.getElementById (contraseña).value ))
+        //localStorage.getItem (document.getElementById ("usuario").value) == localStorage.getItem (document.getElementById ("usuarioR").value)&&
+        //localStorage.getItem (document.getElementById ("contraseña").value) ==localStorage.getItem (document.getElementById ("contraseñaR").value))
+
+        (localStorage.getItem (document.getElementById ("usuario").value)) && 
+        (localStorage.getItem (document.getElementById ("contraseña").value) )!= null)
+        
 
     { e.preventDefault()
        
@@ -33,189 +60,81 @@ function validar (e){
 
     
         
-    }
-
-               
-
-    else {
-
+    }           
+       else if (
+                 (usuario.value == "") || (contraseña.value=="")
+       )
+       
+       {
         e.preventDefault()
 
-        respuesta.innerHTML = `Bienvenido : ${usuario.value}`;
+        respuesta.innerHTML= "Complete todos los campos"
         
-        pedirTurnos()
-        
+
+       }
+
+       else{
+
+        e.preventDefault()
+            pedirTurnos()
+       }
+      
     }
-    
+               
 
 
-
-}
 
 //direccionar a la pagina de turnos
  
-button.addEventListener ("test", pedirTurnos);
+
 
 function pedirTurnos(){
     window.location.href= "../html/turnos.html"
-
    
 }
 
+//registro de usuario
 
-//crear usuario
+buttonRegistro.addEventListener ("click", guardarDatos)
+function guardarDatos(){
 
+if( localStorage.getItem (document.getElementById ("usuarioR").value) != null){
+    alert("el usuario ya existe")}
+    
 
+else {  
+    //alert("guardando usuario")  
+    const personaNueva= new persona( 
+        document.getElementById ("nombre").value,
+        document.getElementById ("nacimiento").value,
+        document.getElementById ("email").value,
+        document.getElementById ("cel").value,
+        document.getElementById ("usuarioR").value,
+        document.getElementById ("contraseñaR").value
+        )
 
-crearUsuario.addEventListener ("submit", validarRegistro)
-
-function validarRegistro (e){
-      if ((nombreApellido.value =="") || (email.value=="")||(parseInt(cel.value==""))||( parseInt(nacimiento.value==""))||(usuarioRegistro.value=="") || (contraseñaRegistro.value==""))
-
-      {
-        e.preventDefault();
-
-        respuestaR.innerHTML= "Complete todos los campos";
-
-        
-      }
-
-      else{
-        
-        
-        e.preventDefault();
         ingreso()
+    
+        const PersonaIngresadaAJSON= JSON.stringify (personaNueva);
+        localStorage.setItem (personaNueva.usuario,PersonaIngresadaAJSON)
+        const traidaDelStorage= local.localStorage.getItem (personaNueva)
+        const objJSON = JSON.parse (traidaDelStorage)
+        
+    
+    }
 
-        respuestaR.innerHTML=`Bienvenido ${nombreApellido.value}`;
+       
 
-      }
+      
+
+
 }
 
-//direccionar a la pagina html de usuario ingresado
 
-buttonR.addEventListener ("test", ingreso);
-
+//redirecciona a una pagina que le dice al usuario que ya se registro
 function ingreso(){
     window.location.href= "../html/usuarioIngresado.html";
-
-   
 }
-
-//sacar turnos.
-
-let servicio= document.getElementById ("servicio");
-let dias= document.getElementById ("dias");
-let hora= document.getElementById ("hora");
-let pago= document.getElementById ("pagos");
-let opinion = document. getElementById ("opinion");
-let sugerencia= document.getElementById ("sugerencia");
-let buttonEnviar= document.getElementById ("buttonEnviar");
-let respTurnos= document.getElementById ("respuesta-turnos");
-let formTurnos= document.getElementById ("formSacarTurnos");
-
-//validar este formulario
-
-
-
-let turnos = []
-
-
-
-function sacarTurno (ev){
-    class turno {
-        constructor(servicio,dia,hora,pago){
-            this.servicio=servicio;
-            this.dia=dia;
-            this.hora=hora;
-            this.pago=pago
-            this.opinion=opinion;
-            this.sugerencia=sugerencia
-        }
-    }
-}
-    
-    
-    const turno= new turno (servicio, dia ,hora, pago,opinion,sugerencia)
-
    
 
-    formTurnos.addEventListener ("click", mostrarInfo)
 
-    function mostrarInfo (ev){
-        if ( (servicio.value =="") || (dias.value =="")||(hora.value=="")||(pago.value=="")||(opinion.value =="")|| (sugerencia.value=="") )
-    
-       {ev.preventDefault ()
-    
-        respTurnos.innerHTML= "Por favor, completa todos los campos"
-    }
-    
-    else{
-        ev.addEventListener();
-    
-        respTurnos.innerHTML= ` Has elegido el servicio ${servicio}, el día ${dias} \n. Tu horario es: ${hora} y tu forma de pago será: ${pago} \n. Muchas gracias por elegirnos `
-    }
-    }    
-
-   
-
-buttonEnviar.addEventListener ("test",agendarTurno)
-
-function agendarTurno(){
-    turnos.push (turno)
-    respTurnos.innerHTML= ` Has elegido el servicio ${servicio}, el día ${dias} \n. Tu horario es: ${hora} y tu forma de pago será: ${pago} \n. Muchas gracias por elegirnos `
-
-}
-
-
-
-
-//guardo en el storage
-
-localStorage.setItem ("TurnoPedido", JSON.stringify (turnos))
-localStorage.getItem ("servicio");
-localStorage.getItem ("dias")
-localStorage.getItem ("hora")
-localStorage.getItem ("pago")
-localStorage.getItem ("opinion")
-localStorage.getItem ("sugerencia")
-
-mostrarInfo (turnos)
-
-
-
-
-
-/* function sacarTurno (){
-    ev.addEventListener();
-
-    respTurnos.innerHTML= ` Has elegido el servicio ${servicio.value}, el día ${dias.value} \n. Tu horario es: ${hora.value} y tu forma de pago será: ${pago.value} \n. Muchas gracias por elegirnos `
-    turnos.push (Turno)
-}
- 
-
-
-sacarTurnos.addEventListener ("test", enviarTurnos)
-
-function enviarTurnos (ev){
-   if ( (servicio =="") || (dias =="")||(hora=="")||(pago=="")||(opnion =="")|| (sugerencia=="") )
-
-   {ev.preventDefault ()
-
-    respTurnos.innerHTML= "Por favor, completa todos los campos"
-}
-
-else{
-    ev.addEventListener();
-
-    respTurnos.innerHTML= ` Has elegido el servicio ${servicio.value}, el día ${dias.value} \n. Tu horario es: ${hora.value} y tu forma de pago será: ${pago.value} \n. Muchas gracias por elegirnos `
-}
-}
-
-buttonEnviar.addEventListener ("test",sacarTurno)
-
-function sacarTurno (ev){
-    ev.addEventListener();
-
-    respTurnos.innerHTML= ` Has elegido el servicio ${servicio.value}, el día ${dias.value} \n. Tu horario es: ${hora.value} y tu forma de pago será: ${pago.value} \n. Muchas gracias por elegirnos `
-    
-}*/
