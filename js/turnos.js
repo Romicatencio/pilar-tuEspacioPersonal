@@ -1,5 +1,7 @@
 //sacar turnos.
 
+turnoPedido=[];
+
 let servicio= document.getElementById ("servicio").value;
 let dias= document.getElementById ("dias").value;
 let hora= document.getElementById ("hora").value;
@@ -13,49 +15,38 @@ let formTurnos= document.getElementById ("formSacarTurnos");
 //validar este formulario
 
 
-
-
-
-
-
-
     class turno {
         constructor(servicio,dias,hora,pago){
             
-            this.servicio= this.servicio;{
-                this.TiposDeServicio= depilacionLaser,velaSlim,bodyUp, radiofrecuencia,ondasDeChoque, criolipolisisPorSuccion };
-            this.dias=dias; {
-                this.DiasDisponibles=lunes, martes,miercoles, jueves, viernes
-            };
-            this.hora=hora; {
-                this.HorasDisponibles=10, 11, 12, 13, 14, 15, 16, 17, 18
-            };
-            this.pago=pago;{
-                mediosPago= credito, debito, efectivo
-            };
+            this.servicio= servicio.depilacionLaser,velaSlim,bodyUp, radiofrecuencia,ondasDeChoque, criolipolisisPorSuccion ;
+            this.dias=dias.lunes, martes,miercoles, jueves, viernes;
+            this.hora= hora. parseInt(10, 11, 12, 13, 14, 15, 16, 17, 18);
+            this.pago= credito, debito, efectivo;
             this.opinion=opinion;
             this.sugerencia=sugerencia
         }
     }
 
     
+   
+    buttonEnviar.addEventListener ("submit",agendarTurno)
+    //formTurnos.addEventListener ("submit",agendarTurno)
 
-
-    buttonEnviar.addEventListener ("click",agendarTurno)
-
-    function agendarTurno(){
-        
+    function agendarTurno(e){
+       
         if ( 
             (localStorage.getItem (document.getElementById ("servicio").value))
          && (localStorage.getItem (document.getElementById ("dias").value))&&
-        (localStorage.getItem (document.getElementById ("hora").value)) )
+        (localStorage.getItem (document.getElementById ("hora").value)) !=null)
         
         {
-         
+         e.preventDefault ()
+         alert("turno ya asignado")
         respTurnos.innerHTML= "El turno ya ha sido asignado";
     }
-    
+        
         else{
+            e.preventDefault ()
             const misTurnos= new turno(
                 document.getElementById ("servicio").value,
                 document.getElementById ("dias").value,
@@ -64,22 +55,25 @@ let formTurnos= document.getElementById ("formSacarTurnos");
                 document. getElementById ("opinion").value,
                 document.getElementById ("sugerencia").value)
                 
-                //alert ("su turno ha sido tomado con exito")
+                alert ("su turno ha sido tomado con exito")
+                
                 turnoAsignado()
 
                 const TurnosTomadosAJSON= JSON.stringify (TurnosTomadosAJSON);
                 localStorage.setItem (tomandoTurnos, TurnosTomadosAJSON)
-                const TraidaDStorage= localStorage.getItem (tomandoTurnos)
-                const JsonAObjeto= JSON.parse (TraidaDStorage)
+                //const TraidaDStorage= localStorage.getItem (tomandoTurnos)
+                //const JsonAObjeto= JSON.parse (TraidaDStorage)
             }
-    
+
+            
+            
     }    
     
 
  
 
-
- function turnoAsignado(){
+   //buttonEnviar.addEventListener ("click",turnoAsignado)
+   function turnoAsignado(){
 
    respTurnos.innerHYML= `Has escogido el servicio: ${servicio.value}, el dia ${dias.value}\n
    en el horario de las ${hora.value}`
